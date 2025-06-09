@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Equipment</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <img src="img/geartrack-logo.png" alt="GearTrack Logo" class="logo-img" />
+      <span class="logo-text">GearTrack</span>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="manageequipment.html" class="active">Manage Equipment</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="gearreservation.html">Gear Reservation</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="section-bg">
+    <section class="crud-section">
+      <div class="page-header">
+        <h1 class="section-title">Manage Your Equipment</h1>
+        <p>Use the form below to simulate adding, updating, and deleting gear.</p>
+      </div>
+
+      <form id="equipmentForm" class="equipment-form-section equipment-form">
+        <div class="form-group">
+          <label for="name">Equipment Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="Balls">Balls</option>
+            <option value="Footwear">Footwear</option>
+            <option value="Gear">Gear</option>
+            <option value="Apparel">Apparel</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" required />
+        </div>
+        <div class="form-group">
+          <label for="condition">Condition</label>
+          <input type="text" id="condition" placeholder="e.g., New, Used, Good" required />
+        </div>
+        <button type="submit" id="submitBtn" class="form-submit">Add Equipment</button>
+
+      </form>
+
+      <div class="page-header">
+        <h2 class="section-title">Equipment List</h2>
+      </div>
+
+      <div class="equipment-table-section">
+        <table id="equipmentTable" class="equipment-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Condition</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Entries will be inserted dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GearTrack | Designed by Sucharitha Reddy Gaddam</p>
+  </footer>
+
+<script src="js/manageequipment.js"></script>
+
+ 
+</body>
+</html>

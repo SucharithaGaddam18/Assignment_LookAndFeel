@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GearTrack - Analytics</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="img/geartrack-logo.png" alt="GearTrack Logo" class="logo-img" />
+      <span class="logo-text">GearTrack</span>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="manageequipment.html">Manage Equipment</a>
+      <a href="analytics.html" class="active">Analytics</a>
+      <a href="gearreservation.html">Gear Reservation</a>
+    </div>
+  </nav>
+
+  <main class="analytics-main">
+    <h1 class="section-title">Equipment Analytics</h1>
+    <div class="analytics-summary">
+      <div class="summary-card" id="inventoryCard">
+        <h2 id="totalInventoryCount">0</h2>
+        <p>Total Inventory Units</p>
+      </div>
+      <div class="summary-card" id="categoryCard">
+        <h2 id="uniqueCategoryCount">0</h2>
+        <p>Unique Categories</p>
+      </div>
+    </div>
+
+    <div class="analytics-charts">
+      <div class="chart-box blue-box">
+        <h3>Item-wise Condition Breakdown</h3>
+        <p>How each  item&#39;s inventory is distributed by condition.</p>
+        <canvas id="chart1"></canvas>
+        <button class="download-btn">Download</button>
+      </div>
+      <div class="chart-box yellow-box">
+        <h3>Category Distribution</h3>
+        <p>Distribution of items across equipment categories.</p>
+        <canvas id="chart2"></canvas>
+        <button class="download-btn">Download</button>
+      </div>
+      <div class="chart-box lavender-box">
+        <h3>Condition Breakdown</h3>
+        <p>Total number of equipment entries for each condition.</p>
+        <canvas id="chart3"></canvas>
+        <button class="download-btn">Download</button>
+      </div>
+      <div class="chart-box green-box">
+        <h3>Category-wise Quantity by Condition</h3>
+        <p>How many units exist per category, split by condition.</p>
+        <canvas id="chart4"></canvas>
+        <button class="download-btn">Download</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GearTrack | Designed by Sucharitha Reddy Gaddam</p>
+  </footer>
+
+  <script src="js/analytics.js"></script>
+</body>
+</html>

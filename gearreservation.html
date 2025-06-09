@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GearTrack - Gear Reservation</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="img/geartrack-logo.png" alt="GearTrack Logo" class="logo-img" />
+      <span class="logo-text">GearTrack</span>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="manageequipment.html">Manage Equipment</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="gearreservation.html" class="active">Reserve Gear</a>
+    </div>
+  </nav>
+
+  <main class="reservation-section">
+    <h1 class="page-header">Gear Reservation</h1>
+    <p class="page-subheader">Reserve your favorite gear for practice, games, or events.</p>
+
+    <div class="info-card">
+      <h2>Why Reserve Gear?</h2>
+      <p>Ensure your required equipment is available when you need it. Plan ahead and avoid last-minute surprises on match day!</p>
+    </div>
+
+    <form id="reservationForm" class="reservation-form">
+      <div class="form-group">
+        <label for="itemName">Item Name</label>
+        <input type="text" id="itemName" required />
+      </div>
+      <div class="form-group">
+        <label for="reservationDate">Date</label>
+        <input type="date" id="reservationDate" required />
+      </div>
+      <div class="form-group">
+        <label for="reservationTime">Time</label>
+        <input type="time" id="reservationTime" required />
+      </div>
+      <div class="form-group">
+        <label for="reservationPurpose">Reservation Purpose</label>
+        <select id="reservationPurpose" required>
+          <option value="">Select Purpose</option>
+          <option value="Practice">Practice</option>
+          <option value="Game">Game</option>
+          <option value="Workout">Workout</option>
+          <option value="Tournament">Tournament</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-reserve">Reserve Now</button>
+    </form>
+
+    <h2 class="reservation-list-header">My Reservations</h2>
+    <div id="reservationList" class="reservation-list"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GearTrack | Designed by Sucharitha Reddy Gaddam</p>
+  </footer>
+
+  <script src="js/gearreservation.js"></script>
+</body>
+</html>
